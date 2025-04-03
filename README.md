@@ -55,35 +55,7 @@ e-shop/
 
 ## API Integration Points
 
-The frontend currently uses a static JSON file (`public/data/products.json`) for product data. The backend developer should implement the following endpoints:
-
-1. **Products API**
-   ```typescript
-   GET /api/products
-   GET /api/products/:id
-   GET /api/products/category/:category
-   ```
-
-2. **Cart API**
-   ```typescript
-   POST /api/cart
-   GET /api/cart
-   PUT /api/cart/:id
-   DELETE /api/cart/:id
-   ```
-
-3. **User API**
-   ```typescript
-   POST /api/auth/register
-   POST /api/auth/login
-   GET /api/auth/me
-   ```
-
-4. **Reviews API**
-   ```typescript
-   GET /api/products/:id/reviews
-   POST /api/products/:id/reviews
-   ```
+The frontend currently uses a static JSON file (`public/data/products.json`) for product data.
 
 ## State Management
 
@@ -92,15 +64,6 @@ The application uses React Context for state management:
 1. **CartContext**: Manages shopping cart state
 2. **CurrencyContext**: Handles currency selection and formatting
 3. **AuthContext**: Manages user authentication state
-
-## Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-VITE_API_URL=http://localhost:3000
-VITE_CURRENCY_API_KEY=your_api_key
-```
 
 ## Getting Started
 
@@ -113,13 +76,6 @@ VITE_CURRENCY_API_KEY=your_api_key
    ```bash
    npm run dev
    ```
-
-## Build for Production
-
-```bash
-npm run build
-```
-
 ## Backend Integration Steps
 
 1. Replace static data with API calls:
@@ -127,27 +83,8 @@ npm run build
    - Update `ProductPage.jsx` to fetch from `/api/products/:id`
    - Update `Cart.jsx` to use cart API endpoints
 
-2. Implement authentication:
-   - Add login/register forms
-   - Integrate with auth API
-   - Add protected routes
-
-3. Add error handling:
-   - Implement API error handling
-   - Add loading states
-   - Show error messages
-
-4. Add image handling:
-   - Implement image upload
-   - Add image optimization
-   - Handle image loading errors
-
 ## Contributing
 
 1. Create a new branch for your feature
 2. Make your changes
 3. Submit a pull request
-
-## License
-
-MIT
