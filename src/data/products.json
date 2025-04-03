@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Casual Shirt",
+    "price": 29.99,
+    "image": "src/assets/shirt.jpg",
+    "category": "Men",
+    "description": "A comfortable and stylish casual shirt made from 100% cotton. Perfect for everyday wear with a modern fit and breathable fabric.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "White", "Blue", "Gray"]
+  },
+  {
+    "id": 2,
+    "name": "Denim Jacket",
+    "price": 49.99,
+    "image": "src/assets/jacket.jpg",
+    "category": "Men",
+    "description": "Classic denim jacket with a timeless design. Made from premium denim with brass buttons and adjustable cuffs.",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Blue", "Black"]
+  },
+  {
+    "id": 3,
+    "name": "Running Shoes",
+    "price": 59.99,
+    "image": "src/assets/shoes.jpg",
+    "category": "Unisex",
+    "description": "High-performance running shoes with superior cushioning and breathable mesh upper. Perfect for runners of all levels.",
+    "sizes": ["36", "37", "38", "39", "40", "41", "42", "43", "44"],
+    "colors": ["Black", "White", "Blue", "Red"]
+  },
+  {
+    "id": 4,
+    "name": "Summer Dress",
+    "price": 39.99,
+    "image": "src/assets/dress.jpg",
+    "category": "Women",
+    "description": "Light and breezy summer dress made from soft, flowy fabric. Features a flattering A-line cut and adjustable straps.",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["White", "Pink", "Blue", "Yellow"]
+  },
+  {
+    "id": 5,
+    "name": "Classic T-Shirt",
+    "price": 19.99,
+    "image": "src/assets/tshirt.jpg",
+    "category": "Unisex",
+    "description": "Essential cotton t-shirt with a comfortable fit. Made from soft, breathable fabric perfect for everyday wear.",
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": ["Black", "White", "Gray", "Navy"]
+  },
+  {
+    "id": 6,
+    "name": "Slim Fit Jeans",
+    "price": 44.99,
+    "image": "src/assets/jeans.jpg",
+    "category": "Men",
+    "description": "Modern slim fit jeans with stretch fabric for maximum comfort. Features a classic five-pocket design.",
+    "sizes": ["28", "30", "32", "34", "36", "38"],
+    "colors": ["Blue", "Black", "Gray"]
+  },
+  {
+    "id": 7,
+    "name": "Floral Blouse",
+    "price": 34.99,
+    "image": "src/assets/blouse.jpg",
+    "category": "Women",
+    "description": "Elegant floral blouse with a feminine design. Made from lightweight fabric with a flattering cut.",
+    "sizes": ["XS", "S", "M", "L"],
+    "colors": ["White", "Pink", "Blue"]
+  },
+  {
+    "id": 8,
+    "name": "Sports Shorts",
+    "price": 24.99,
+    "image": "src/assets/shorts.jpg",
+    "category": "Unisex",
+    "description": "Comfortable sports shorts with moisture-wicking fabric. Perfect for workouts and casual wear.",
+    "sizes": ["XS", "S", "M", "L", "XL"],
+    "colors": ["Black", "Navy", "Gray", "Red"]
+  }
+] 
