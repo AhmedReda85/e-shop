@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../context/AuthContext';
 import { motion } from 'framer-motion';
 import { Mail, Lock, ArrowRight } from 'lucide-react';
+import AuthService from '../../services/AuthService';
 
 export default function Login() {
   const navigate = useNavigate();
-  const { login } = useAuth();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -27,10 +26,8 @@ export default function Login() {
     setIsLoading(true);
 
     try {
-      // Here you would typically make an API call to your backend
-      // For now, we'll just simulate a successful login
       if (formData.email && formData.password) {
-        login({ email: formData.email, name: formData.email.split('@')[0] });
+        AuthService.login({ email: formData.email, name: formData.email.split('@')[0] });
         navigate('/');
       } else {
         setError('Please fill in all fields');
