@@ -1,42 +1,69 @@
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const categories = [
+  {
+    id: 'men',
+    name: 'Men',
+    image: '/images/products/men.jpg',
+    description: 'Discover our latest collection of men\'s clothing'
+  },
+  {
+    id: 'women',
+    name: 'Women',
+    image: '/images/products/women.jpg',
+    description: 'Explore our stylish women\'s fashion line'
+  },
+  {
+    id: 'kids',
+    name: 'Kids',
+    image: '/images/products/boys.jpg',
+    description: 'Find the perfect outfits for your little ones'
+  }
+];
 
 export default function CategoryShowcase() {
-    const navigate = useNavigate();
-    const categories = [
-      { name: "Men", image: "src/assets/men.jpg" },
-      { name: "Women", image: "src/assets/women.jpg" },
-      { name: "Boys", image: "src/assets/boys.jpg" },
-      { name: "Girls", image: "src/assets/girls.jpg" }
-    ];
-  
-    const handleCategoryClick = (category) => {
-      navigate('/products', { state: { selectedCategory: category } });
-    };
-  
-    return (
-      <section className="py-12 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Shop by Category</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {categories.map((category) => (
-              <div 
-                key={category.name} 
-                className="relative group cursor-pointer"
-                onClick={() => handleCategoryClick(category.name)}
-              >
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (categoryId) => {
+    navigate(`/products?category=${categoryId}`);
+  };
+
+  return (
+    <section className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          Shop by Category
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {categories.map((category) => (
+            <motion.div
+              key={category.id}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg"
+              onClick={() => handleCategoryClick(category.id)}
+            >
+              <div className="aspect-w-16 aspect-h-9">
                 <img
                   src={category.image}
                   alt={category.name}
-                  className="w-full h-60 object-cover rounded-lg shadow-md transition-transform group-hover:scale-105"
+                  className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition">
-                  <span className="text-white text-xl font-semibold">{category.name}</span>
-                </div>
               </div>
-            ))}
-          </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {category.name}
+                </h3>
+                <p className="text-gray-200 text-sm">
+                  {category.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
+}
   

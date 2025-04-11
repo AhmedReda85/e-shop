@@ -18,11 +18,7 @@ export default function HeroSection() {
           New Arrivals Are Here
         </motion.h1>
         <p className="mt-4 text-lg md:text-xl">Shop the latest trends in fashion for men, women, and kids.</p>
-        <div className="flex justify-center gap-4 mt-6">
-          <a href="#shop" className="px-6 py-3 bg-cyan-600 text-white rounded-lg shadow-md hover:bg-blue-900 transition">
-            Shop Now
-          </a> 
-           </div>
+        
       </div>
       <div className="absolute bottom-6 animate-bounce">
         <ChevronDown size={32} className="text-white" />
