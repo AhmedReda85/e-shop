@@ -5,7 +5,6 @@ import { ArrowRight } from 'lucide-react';
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
       <div className="relative bg-gray-900 text-white">
         <div className="absolute inset-0">
           <img

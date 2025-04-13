@@ -11,7 +11,7 @@
       "reviews": [
         {
           "id": 1,
-          "user": "John D.",
+          "user": "Omar Ghoulam",
           "rating": 5,
           "comment": "Great quality and fit!"
         }
@@ -29,9 +29,15 @@
       "reviews": [
         {
           "id": 1,
-          "user": "Mike R.",
+          "user": "Mohamed Khaled",
           "rating": 4,
           "comment": "Perfect fit and very comfortable"
+        },
+        {
+          "id": 2,
+          "user": "Youssif Zain",
+          "rating": 5,
+          "comment": "comfortable and budget friendly"
         }
       ]
     },
@@ -65,7 +71,7 @@
       "reviews": [
         {
           "id": 1,
-          "user": "Emma L.",
+          "user": "Mohamed Azzam",
           "rating": 4,
           "comment": "Perfect for office wear"
         }
@@ -83,7 +89,7 @@
       "reviews": [
         {
           "id": 1,
-          "user": "Parent",
+          "user": "Ahmed ELsayed",
           "rating": 5,
           "comment": "Great quality and my son loves it!"
         }
@@ -101,7 +107,7 @@
       "reviews": [
         {
           "id": 1,
-          "user": "Parent",
+          "user": "Salma H.",
           "rating": 4,
           "comment": "Perfect for summer days"
         }
@@ -208,7 +214,7 @@
       "reviews": [
         {
           "id": 6,
-          "user": "Tom Brown",
+          "user": "Asser R.",
           "rating": 5,
           "comment": "Perfect fit and great quality!",
           "date": "2024-03-01"
@@ -227,7 +233,7 @@
       "reviews": [
         {
           "id": 7,
-          "user": "Lisa Anderson",
+          "user": "Lisa G.",
           "rating": 5,
           "comment": "Perfect for my active son!",
           "date": "2024-02-28"
@@ -246,7 +252,7 @@
       "reviews": [
         {
           "id": 8,
-          "user": "Mary Wilson",
+          "user": "Mary Ehab",
           "rating": 5,
           "comment": "My daughter loves this dress!",
           "date": "2024-02-25"
@@ -265,7 +271,7 @@
       "reviews": [
         {
           "id": 9,
-          "user": "Robert Taylor",
+          "user": "Bola Ibrahim",
           "rating": 4,
           "comment": "Good quality polo shirt.",
           "date": "2024-02-20"
@@ -284,7 +290,7 @@
       "reviews": [
         {
           "id": 10,
-          "user": "Jennifer Lee",
+          "user": "Loai",
           "rating": 5,
           "comment": "Perfect for yoga and everyday wear!",
           "date": "2024-02-15"
@@ -303,7 +309,7 @@
       "reviews": [
         {
           "id": 11,
-          "user": "Chris Martin",
+          "user": "Ganna F.",
           "rating": 5,
           "comment": "Great winter jacket for my son!",
           "date": "2024-02-10"

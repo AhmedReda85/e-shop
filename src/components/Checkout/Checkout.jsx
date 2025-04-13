@@ -26,7 +26,7 @@ export default function Checkout() {
   });
 
   const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const shipping = 5.99;
+  const shipping = subtotal > 100 ? 0 : 10;
   const total = subtotal + shipping;
 
   const handleInputChange = (e) => {
@@ -42,7 +42,7 @@ export default function Checkout() {
     setLoading(true);
 
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 4000));
 
       addPurchase({
         userId: user.id,

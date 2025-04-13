@@ -8,14 +8,6 @@ import Cart from '../Cart/Cart';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearch = (e) => {
-    e.preventDefault();
-    // Implement search functionality
-    setIsSearchOpen(false);
-  };
 
   return (
     <header className="bg-white shadow-sm">
@@ -37,20 +29,10 @@ export default function Header() {
             <Link to="/kids" className="text-gray-600 hover:text-blue-600">
               Kids
             </Link>
-            <Link to="/accessories" className="text-gray-600 hover:text-blue-600">
-              Accessories
-            </Link>
           </nav>
 
           {/* Right Side Icons */}
           <div className="flex items-center space-x-4">
-            <button
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 hover:bg-gray-100 rounded-full"
-            >
-              <Search className="h-5 w-5 text-gray-600" />
-            </button>
-
             <Link
               to={AuthService.isUserAuthenticated() ? '/profile' : '/login'}
               className="p-2 hover:bg-gray-100 rounded-full"
@@ -109,39 +91,8 @@ export default function Header() {
             >
               Kids
             </Link>
-            <Link
-              to="/accessories"
-              className="block text-gray-600 hover:text-blue-600"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Accessories
-            </Link>
+  
           </nav>
-        </motion.div>
-
-        {/* Search Bar */}
-        <motion.div
-          initial={false}
-          animate={{ height: isSearchOpen ? 'auto' : 0 }}
-          className="overflow-hidden"
-        >
-          <form onSubmit={handleSearch} className="py-4">
-            <div className="flex">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search products..."
-                className="flex-1 px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-              <button
-                type="submit"
-                className="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700"
-              >
-                Search
-              </button>
-            </div>
-          </form>
         </motion.div>
       </div>
 

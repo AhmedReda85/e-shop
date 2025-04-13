@@ -26,10 +26,8 @@ export default function ProductPage() {
   const [error, setError] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
-  // Mock additional product images - in a real app, these would come from the product data
   const productImages = product ? [
     product.image,
-    // Add more image variations here if available
   ] : [];
 
   useEffect(() => {
@@ -115,8 +113,7 @@ export default function ProductPage() {
       return;
     }
 
-    // Here you would typically send the review to your backend
-    // For now, we'll just show a success message
+    
     setReviewText("");
     setRating(5);
     setError("");
